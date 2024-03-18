@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="num"></h1>
+    <input type="number" id="number1">&nbsp;&nbsp;&nbsp;
+    <input type="number" id="number2">&nbsp;&nbsp;&nbsp;
+    <button onclick="justAdd()">+</button>
+    <button onclick="justMin()">-</button>
+    <button onclick="justDiv()">/</button>
+    <button onclick="justMult()">*</button>
+    <button onclick="callAlert()">Call Alert</button>
+
+
+    <button id="justLol" onclick="justMe()">1</button>
+
+    <p id="header" onclick="giveMe()"></p>
+</body>
+</html>
+<script>
+    // console.log(document.getElementById('number1()+number2()'))
+    // console.log(document.getElementById('number1').value);
+    function justAdd() {
+        // console.log(document.getElementById('number1').value)
+        // console.log(document.getElementById('number2').value)
+        document.getElementById('num').innerHTML = Number(document.getElementById('number1').value) + Number(document.getElementById('number2').value)
+    }
+    function justMin(){
+        document.getElementById('num').innerHTML = Number(document.getElementById('number1').value) - Number(document.getElementById('number2').value)
+    }
+
+    function justDiv(){
+        document.getElementById('num').innerHTML = Number(document.getElementById('number1').value) / Number(document.getElementById('number2').value)
+    }
+
+    function justMult(){
+        document.getElementById('num').innerHTML = Number(document.getElementById('number1').value) * Number(document.getElementById('number2').value)
+    }
+
+    // parseFloat , parseInt
+
+    let num = 40
+    let dec = 30.356
+
+    let anotherNumber = "335 Daniel"
+    console.log(num.toString());
+    console.log(dec.toFixed());
+    console.log(parseInt(anotherNumber));
+    console.log(parseFloat(anotherNumber));
+
+    function callAlert(){
+        alert()
+    }
+
+
+    // A function is a block of code written to excute a particular task
+
+    // why function is written is because task is want to be reused
+
+    // Arguement and Parameters
+
+    function justMe(){
+        document.getElementById("header").innerHTML += Number(document.getElementById("justLol").value)
+    }
+
+</script>
+<script src="var.js"></script>
